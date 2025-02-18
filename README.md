@@ -38,3 +38,39 @@ dailycheckin
 export NODE_OPTIONS="--tls-min-v1.0 --tls-cipher-list=DEFAULT:@SECLEVEL=1"
 ```
 
+
+
+## 拉python库如果 pycryptodome dailycheckin 换源了也拉可参考我的步骤
+进入容器控制台
+
+将默认的源替换为国内镜像源（如阿里云、清华大学等）：
+
+```bash
+sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+```
+然后更新包列表并重新尝试安装：
+
+```bash
+apk update
+apk add gcc
+apk add build-base musl-dev
+```
+就可拉下来了
+
+## 将阿里云镜像源添加为受信任主机
+如果必须使用 HTTP 源且你信任该镜像源，可以使用 pip 的 --trusted-host 选项，允许 pip 跳过安全检查：
+
+```bash
+pip install <package-name> -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+
+```
+这样，pip 会信任该镜像源并忽略安全警告。你也可以在 pip 的配置文件中永久设置此选项。编辑 pip 的配置文件
+（位于 ~/.pip/pip.conf 或 C:\Users\<username>\pip\pip.ini），并添加以下内容：
+
+```bash
+[global]
+trusted-host = mirrors.aliyun.com
+index-url = http://mirrors.aliyun.com/pypi/simple/
+
+```
+这样每次使用 pip 时都不再需要手动添加 --trusted-host 选项。

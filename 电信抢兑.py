@@ -364,9 +364,9 @@ def ks(phone, ticket, uid):
         if rs:
             bd = js.call('main').split('=')
             ck[bd[0]] = bd[1]
-
+    # 'https://wapact.189.cn:9001/gateway/golden/api/queryBigDataAppGetOrInfo?floorType=0&userType=1&page&1&order=2&tabOrder=',
         queryBigDataAppGetOrInfo = s.get(
-            'https://wapact.189.cn:9001/gateway/golden/api/queryBigDataAppGetOrInfo?floorType=0&userType=1&page&1&order=2&tabOrder=',
+            'https://waphub.189.cn/gateway/golden/goldGoods/getGoodsList?floorType=0&userType=1&page&1&order=2&tabOrder=',
             cookies=ck).json()
         # printn(queryBigDataAppGetOrInfo)
         for i in queryBigDataAppGetOrInfo["biz"]["ExchangeGoodslist"]:

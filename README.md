@@ -1,12 +1,14 @@
 # yyt
 
 #### 介绍
-营业厅脚本，收集自互联网
+营业厅脚本，收集自互联网 好用欢迎打赏
+![image-20250225134115409](https://img.hnking.cn//blog/202502251341542.png)
 
 ## 依赖
 ### node
 
 ```
+xmldom
 node-rsa	
 tough-cookie	
 crypto-js	
@@ -21,6 +23,7 @@ nodemailer
 ### python
 
 ```
+bs4
 httpx==0.23.2	
 httpx	
 pycryptodome	

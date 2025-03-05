@@ -2,7 +2,18 @@
 
 #### 介绍
 营业厅脚本，收集自互联网 好用欢迎打赏
+
 ![image-20250225134115409](https://img.hnking.cn//blog/202502251341542.png)
+
+## 使用方法
+订阅管理 --> 创建订阅 
+
+```
+名称 yyt
+链接 https://gitee.com/jdqlscript/yyt.git
+定时规则 1 1 1 1 1 1
+```
+
 
 ## 依赖
 ### node
@@ -36,12 +47,20 @@ dailycheckin
 ## 配置文件
 
 ```
-
-
 export NODE_OPTIONS="--tls-min-v1.0 --tls-cipher-list=DEFAULT:@SECLEVEL=1"
+
+## 签到环境变量
+## 自己设置电信的服务密码, 把 手机号#服务密码 填到变量里, 多账号换行或&或@隔开:
+export chinaTelecomAccount="138000000#111111"
+
+
+## 抢兑环境变量
+## 自己设置电信的服务密码, 把 手机号@服务密码 填到变量里, 多账号换行或&隔开:
+export jdhf="138000000@111111&138000010@111111"
 ```
 
-
+## 定时规则
+定时规则请按需要自行配置，不懂百度
 
 ## 拉python库如果 pycryptodome dailycheckin 换源了也拉可参考我的步骤
 进入容器控制台

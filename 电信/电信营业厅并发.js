@@ -8,7 +8,8 @@
 //变量格式: 手机号#服务密码
 //多号创建多个变量或者换行、&隔开
 /*
-  变量名chinaTelecomAccount，格式如下
+    const $ = new Env("电信营业厅并发");
+    变量名chinaTelecomAccount，格式如下
  * cron "1 10,18 * * *" 
  * export chinaTelecomAccount='13454545457#123456@13454545457#123456'
  */

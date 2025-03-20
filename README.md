@@ -13,6 +13,7 @@
 链接 https://gitee.com/jdqlscript/yyt.git
 定时规则 1 1 1 1 1 1
 黑名单  old
+依赖文件 sendNotify|瑞数
 ```
 
 

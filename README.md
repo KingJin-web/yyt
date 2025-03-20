@@ -34,6 +34,9 @@ nodemailer
 ### python
 
 ```
+tenacity
+pandas
+tabulate
 bs4
 httpx==0.23.2	
 httpx	

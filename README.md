@@ -6,10 +6,10 @@
 ![image-20250225134115409](https://img.hnking.cn//blog/202502251341542.png)
 
 ## 使用方法
-### 拉库
+### 电信拉库
 
 ```
-ql repo https://gitee.com/jdqlscript/yyt.git "" "old" "瑞数|sendNotify.js" ""
+ql repo https://gitee.com/jdqlscript/yyt.git "电信" "old" "瑞数通杀.js|sendNotify.js" ""
 ```
 
 ### 订阅管理 --> 创建订阅 

@@ -454,6 +454,7 @@ def first_request(res=''):
 
 
 def main():
+    print()
     global wt,rs
     r = ss.get('https://wapact.189.cn:9001/gateway/stand/detailNew/exchange')
     if '$_ts=window' in r.text:
@@ -463,14 +464,14 @@ def main():
     else:
         print("瑞数加密已关闭")
         rs = 0
-    if os.environ.get('jdhf')!= None:
-        chinaTelecomAccount = os.environ.get('jdhf')
+    if os.environ.get('chinaTelecomAccount')!= None:
+        chinaTelecomAccount = os.environ.get('chinaTelecomAccount')
     else:
         chinaTelecomAccount = jdhf
 
     for i in chinaTelecomAccount.split('&'):
 
-        i = i.split('@')
+        i = i.split('#')
         phone = i[0]
         password = i[1]
         uid = i[-1]

@@ -1,5 +1,5 @@
 /*
-    const $ = new Env("电信营业厅并发");
+    const $ = new Env("电信营业厅签到");
     变量名chinaTelecomAccount，格式如下
  * cron "1 18 * * *" 
  * export chinaTelecomAccount='13454545457#123456&13454545457#123456'

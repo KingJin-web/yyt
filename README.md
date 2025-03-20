@@ -12,6 +12,7 @@
 名称 yyt
 链接 https://gitee.com/jdqlscript/yyt.git
 定时规则 1 1 1 1 1 1
+黑名单  old
 ```
 
 
@@ -58,6 +59,9 @@ export NODE_OPTIONS="--tls-min-v1.0 --tls-cipher-list=DEFAULT:@SECLEVEL=1"
 export chinaTelecomAccount="138000000#111111&138000000#111111"
 
 ```
+## 注意
+
+
 
 ## 定时规则
 定时规则请按需要自行配置，不懂百度

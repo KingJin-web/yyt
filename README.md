@@ -6,7 +6,13 @@
 ![image-20250225134115409](https://img.hnking.cn//blog/202502251341542.png)
 
 ## 使用方法
-订阅管理 --> 创建订阅 
+### 拉库
+
+```
+ql repo https://gitee.com/jdqlscript/yyt.git "" "old" "瑞数|sendNotify.js" ""
+```
+
+### 订阅管理 --> 创建订阅 
 
 ```
 名称 yyt

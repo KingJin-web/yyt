@@ -7,7 +7,11 @@
 //变量：chinaTelecomAccount
 //变量格式: 手机号#服务密码
 //多号创建多个变量或者换行、&隔开
-
+/*
+  变量名chinaTelecomAccount，格式如下
+ * cron "1 10,18 * * *" 
+ * export chinaTelecomAccount='13454545457#123456@13454545457#123456'
+ */
 
 (function (_0x1398c0) {
   process.env.NODE_OPTIONS = "--max-old-space-size=4096 --openssl-legacy-provider";

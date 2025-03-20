@@ -1,12 +1,8 @@
-// 非青龙下在文件开头添加账号配置,
-//process.env.chinaTelecomAccount = `
-//13454545457#123456
-//13454545457#456789
-//`.trim();
+
 
 //变量：chinaTelecomAccount
 //变量格式: 手机号#服务密码
-//多号创建多个变量或者换行、&隔开
+//多号创建多个变量&隔开
 /*
     const $ = new Env("电信营业厅并发");
     变量名chinaTelecomAccount，格式如下

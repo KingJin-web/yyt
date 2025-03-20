@@ -1,13 +1,9 @@
-﻿# 非青龙下在文件开头添加账号配置,
-# process.env.chinaTelecomAccount = `
-# 13454545457#123456
-# 13454545457#456789
-# `.trim();
+
 
 '''
 变量：chinaTelecomAccount
 变量格式: 手机号#服务密码
-多号创建多个变量或者换行、&隔开
+多号创建多个变量&隔开
 '''
 import os
 import re
@@ -601,7 +597,7 @@ async def AI_Yun1(phone, ticket):
 async def main(isTrue):
     tasks = []
 
-    phone_list = PHONES.split('\n') 
+    phone_list = PHONES.split('&') 
     total_tasks = len(phone_list)
     print(f"总任务数：{total_tasks}")
     semaphore = asyncio.Semaphore(5)
@@ -670,13 +666,14 @@ async def main(isTrue):
 
 
 
-WELFARE_CODE=os.environ.get('dx_kl') or "心有灵犀,绑定福利,事事如意,2025加油,草长莺飞,888,年末狂欢,年末回馈"
+WELFARE_CODE=os.environ.get('dx_kl') or "春花烂漫,心有灵犀,绑定福利,事事如意,2025加油,草长莺飞,888,年末狂欢,年末回馈"
 WELFARE_CODES = WELFARE_CODE.split(',') 
 
 # 处理账号字符串，移除空行并清理每行的空白字符
-phone_list = [line.strip() for line in chinaTelecomAccount.split('\n') if line.strip()]
+# phone_list = [line.strip() for line in chinaTelecomAccount.split('\n') if line.strip()]
 
-PHONES = os.environ.get('chinaTelecomAccount') or os.environ.get('PHONES1') or '\n'.join(phone_list)
+PHONES =os.environ.get('chinaTelecomAccount') or os.environ.get('PHONES1') or ""
+print(PHONES)
 
 if __name__ == "__main__":
     pd.set_option('display.max_columns', None)

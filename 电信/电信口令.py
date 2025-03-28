@@ -664,9 +664,9 @@ async def main(isTrue):
         print(f"任务执行出错: {str(e)}")
 
 
+# 春花烂漫,心有灵犀,绑定福利,事事如意,2025加油,草长莺飞,888,年末狂欢,年末回馈
 
-
-WELFARE_CODE=os.environ.get('dx_kl') or "春花烂漫,心有灵犀,绑定福利,事事如意,2025加油,草长莺飞,888,年末狂欢,年末回馈"
+WELFARE_CODE=os.environ.get('dx_kl') or "用户至上"
 WELFARE_CODES = WELFARE_CODE.split(',') 
 
 # 处理账号字符串，移除空行并清理每行的空白字符

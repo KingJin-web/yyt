@@ -615,7 +615,7 @@ async def main():
             print("未检测到账号")
             return
 
-        accounts = chinaTelecomAccount.split('@')
+        accounts = chinaTelecomAccount.split('#')
         account_count = len(accounts)
         print_time_log(f"🚀检测到 【{account_count}】 个账号")
 

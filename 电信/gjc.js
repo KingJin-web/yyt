@@ -14,8 +14,8 @@ console.log=function (){};
 // }
 window = globalThis;
 // window.__proto__ = new Window()
-// global = window;
-delete global
+global = window;
+//delete global
 
 
 document = {

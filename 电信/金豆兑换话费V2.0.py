@@ -615,7 +615,7 @@ async def main():
             print("未检测到账号")
             return
 
-        accounts = chinaTelecomAccount.split('#')
+        accounts = chinaTelecomAccount.split('&')
         account_count = len(accounts)
         print_time_log(f"🚀检测到 【{account_count}】 个账号")
 
@@ -625,6 +625,7 @@ async def main():
             batch_accounts = accounts[i:i + batch_size]
             tasks = []
             for account in batch_accounts:
+                print(account)
                 account_info = account.split('#')
                 phone = account_info[0]
                 password = account_info[1]

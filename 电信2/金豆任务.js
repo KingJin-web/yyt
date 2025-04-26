@@ -1,3 +1,7 @@
+//"""
+// cron: 0 59 9,13 * * *
+// new Env('电信金豆兑换话费');
+// """
 const originalLog = console.log;
 console.log = function (...args) {
     const date = new Date();

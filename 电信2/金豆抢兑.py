@@ -1,3 +1,7 @@
+"""
+cron: 0 59 9,13 * * *
+new Env('电信金豆兑换话费');
+"""
 # 格式
 # 手机号#密码#uid
 # 15555555555#888888#
@@ -12,11 +16,15 @@ appToken='' # 推送的appToken
 phoneArr=[]
 import os
 dxyh=os.getenv('dx')
-for item in dxyh.split('\n'):
+for item in dxyh.split('&'):
+    dxs = item.split('#')
+    uid = ""
+    if len(dxs) == 3:
+        uid = item.split('#')[2]
     phoneArr.append({
         'phone':item.split('#')[0],
         'password':item.split('#')[1],
-        'uid':item.split('#')[2]
+        'uid':uid
     })
 import subprocess
 import re

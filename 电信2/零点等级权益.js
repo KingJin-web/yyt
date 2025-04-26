@@ -1,4 +1,7 @@
-
+// """
+// cron: 30 59 23 * * *
+// new Env('零点等级权益');
+// """
 
 let userPhone = []
 if (process?.env?.dx) {

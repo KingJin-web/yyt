@@ -9,6 +9,7 @@ BRANCH="master"     # 要推送的分支名称
 # 红色警告提示
 echo -e "\033[31m⚠️  警告：强制推送会覆盖远程仓库历史记录！\033[0m"
 read -p "确定要强制推送吗？(y/N) " -n 1 -r
+
 echo    # 换行
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1

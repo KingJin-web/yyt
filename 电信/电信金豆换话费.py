@@ -491,7 +491,7 @@ def main():
         chinaTelecomAccount = os.environ.get('chinaTelecomAccount')
     else:
         chinaTelecomAccount = jdhf
-    for i in chinaTelecomAccount.split('\n'):
+    for i in chinaTelecomAccount.split('&'):
 
         i = i.split('#')
         phone = i[0]

@@ -41,7 +41,7 @@ from Crypto.Util.Padding import pad, unpad
 from aiohttp import ClientSession, TCPConnector
 from concurrent.futures import ThreadPoolExecutor
 import subprocess
-
+print("🚀代抢话费加V  king_mll")
 sys.stdout.reconfigure(encoding='utf-8')
 import _locale
 _locale._getdefaultlocale = (lambda *args: ['zh_CN', 'utf8'])

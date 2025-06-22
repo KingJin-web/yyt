@@ -969,6 +969,7 @@ async def ks(phone, ticket):
         pass
 
 async def main():
+    print("🚀代抢话费加V  king_mll")
     global js_codeRead
     tasks = []
     # with open("e:/work/vscode1/python/电信/rs6.js", "r", encoding="utf-8") as f:

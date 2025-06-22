@@ -474,6 +474,7 @@ async def main(timeDiff,isTRUE,hour):
     await asyncio.gather(*tasks)
 
 if __name__ == "__main__":
+    print("🚀代抢话费加V  king_mll")
     h = datetime.datetime.now().hour
     #h=20                           #手动设置场次的时间
     print("当前小时为: "+str(h))

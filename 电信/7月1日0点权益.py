@@ -388,7 +388,7 @@ async def getSign(ticket, session):
         # 使用合并后的 cookies 发送请求
         response = session.get(
             'https://wappark.189.cn/jt-sign/ssoHomLogin?ticket=' + ticket,
-            cookies=cookies
+            cookies=cookies,headers = {'User-Agent': "Mozilla/5.0 (Linux; Android 13; 22081212C Build/TKQ1.220829.002) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.97 Mobile Safari/537.36"}
         ).json()
 
         if response.get('resoultCode') == '0':
@@ -474,7 +474,6 @@ async def main(timeDiff,isTRUE,hour):
     await asyncio.gather(*tasks)
 
 if __name__ == "__main__":
-    print("🚀代抢话费加V  king_mll")
     h = datetime.datetime.now().hour
     #h=20                           #手动设置场次的时间
     print("当前小时为: "+str(h))
@@ -488,7 +487,7 @@ if __name__ == "__main__":
         print("当前小时为: "+str(h)+"已过14点开始准备抢凌晨")
         wttime= run_Time(23,58,58) #抢凌晨
     #isTRUE=False
-    isTRUE=False
+    isTRUE=True
     #isTRUE等于False则表示忽略所有限制直接运行。这个参数一般用于测试。实际生产一定要设置为True。
     if(wttime >time.time()) :
         wTime=wttime-time.time()

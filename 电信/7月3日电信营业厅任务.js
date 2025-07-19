@@ -1,13 +1,3 @@
-// 非青龙下在文件开头添加账号配置,
-//process.env.chinaTelecomAccount = `
-//13454545457#123456
-//13454545457#456789
-//`.trim();
-
-//变量格式: 手机号#服务密码
-//多号创建多个变量或者换行、&隔开
-
-
 (function (_0x1398c0) {
   process.env.NODE_OPTIONS = "--max-old-space-size=4096 --openssl-legacy-provider";
   process.env.NODE_OPTIONS += " --tls-cipher-list=DEFAULT@SECLEVEL=0";
@@ -142,6 +132,7 @@
           "limit": 0
         },
         _0x220c3a = {
+        "User-Agent": _0x932305,
           "Connection": "keep-alive"
         },
         _0xc0d89d = {
@@ -286,6 +277,7 @@
                         if (_0xd1fef1) {
                           {
                             _0x190a2b.headers = {
+                            "User-Agent": _0x932305,
                               "Cookie": "yiUIIlbdQT3fP=" + (_0xd1fef1.yiUIIlbdQT3fP || "") + "=Of3TQdblIIUiy ;".split("").reverse().join("") + (_0xd1fef1.yiUIIlbdQT3fO || "")
                             };
                             try {
@@ -401,6 +393,7 @@
     ["get_mall_headers"]() {
       return {
         "Content-Type": "application/json;charset=utf-8",
+        "User-Agent": _0x932305,
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Authorization": this.mall_token ? "Bearer " + this.mall_token : "",
         "X-Requested-With": "XMLHttpRequest"
@@ -713,7 +706,7 @@
                   "signDay": _0x972416,
                   "isSeven": _0x1869b5
                 } = _0xa88b12?.["data"];
-                this.log("到签已".split("").reverse().join("") + _0x972416 + "天, 连签" + " 我不告诉你多少 " + "天");
+                this.log("到签已".split("").reverse().join("") + _0x972416 + "天");
                 _0x1869b5 && (await this.exchangePrize());
               } else {
                 let _0x113594 = _0xa88b12?.["msg"] || _0xa88b12?.["resoultMsg"] || _0xa88b12?.["error"] || "";
@@ -1214,7 +1207,7 @@
                   let _0x1aca35 = _0x5ca580?.["userInfo"]?.["levelInfoMap"];
                   this.level = _0x1aca35?.["level"];
                   for (let _0x1c9e42 = 1; _0x1c9e42 <= 10 && this.can_feed; _0x1c9e42++) {
-                    await this.food(_0x1c9e42);
+                    await this.food(_0x1c9e42);//食物
                   }
                 }
               } else {
@@ -2386,6 +2379,7 @@
       }
       ["read_env"](_0x4bcb87) {
         let _0x1a7889 = _0x5dcb01.map(_0x4310e6 => process.env[_0x4310e6]);
+
         for (let _0x606e30 of _0x1a7889.filter(_0x453b93 => !!_0x453b93)) {
           for (let _0x198550 of _0x606e30.split(_0xed67c1).filter(_0x3bf24a => !!_0x3bf24a)) {
             if (this.userList.includes(_0x198550)) {
